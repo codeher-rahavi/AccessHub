@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
+const protectedRoutes = require("./routes/protectedRoutes");
 
 const app = express();
 
@@ -10,7 +11,7 @@ const app = express();
 app.use(express.json()); // Allows parsing of JSON bodies
 app.use(cors()); // Allows frontend to communicate with backend
 app.use("/api", authRoutes);
-
+app.use("/api", protectedRoutes);
 
 // Database Connection
 mongoose.connect(process.env.MONGO_URI)
