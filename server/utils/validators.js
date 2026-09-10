@@ -1,8 +1,6 @@
-// utils/validators.js
 
 // Restricts registration to specific institutional domains
-const COLLEGE_EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@(psgtech\.ac\.in|psgcas\.ac\.in)$/;
-
+const COLLEGE_EMAIL_REGEX =/^[a-zA-Z0-9]+\.([a-zA-Z]+)(\d{2})@bitsathy\.ac\.in$/;
 // Requires: Min 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character
 const STRONG_PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 

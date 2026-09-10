@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { validateSignUp } = require("../utils/validators");
 
-const JWT_SECRET = process.env.JWT_SECRET || "your_super_secret_key";
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const signUp = async (req, res) => {
     try {
