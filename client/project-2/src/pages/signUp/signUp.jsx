@@ -105,7 +105,7 @@ const SignUp = () => {
 
                         {/* Email Input */}
                         <div>
-                            <p className="text-lg mb-1">Email</p>
+                            <p className="text-lg mb-1">Email <span className = "text-red-600">*</span></p>
                             <input 
                                 type="email" 
                                 placeholder="Enter your email"

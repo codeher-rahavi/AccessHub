@@ -11,6 +11,7 @@ const RepeatPassWord = ({ value, onChange }) => {
     return (
         <Fragment>
             <div className="relative">
+                <p>Repeat Password <span className = "text-red-600">*</span></p>
                 <input
                     placeholder="Repeat your password"
                     type={isShowPassWord ? "text" : "password"}
@@ -21,13 +22,13 @@ const RepeatPassWord = ({ value, onChange }) => {
                 {isShowPassWord ? (
                     <FaRegEyeSlash
                         size={22}
-                        className="text-gray-500 cursor-pointer absolute right-3 top-1/2 -translate-y-1/2"
+                        className="text-gray-500 cursor-pointer absolute right-3 bottom-[1px] -translate-y-1/2"
                         onClick={toggleEye}
                     />
                 ) : (
                     <FaRegEye
                         size={22}
-                        className="text-gray-500 cursor-pointer absolute right-3 top-1/2 -translate-y-1/2"
+                        className="text-gray-500 cursor-pointer absolute right-3 bottom-[1px] -translate-y-1/2"
                         onClick={toggleEye}
                     />
                 )}
